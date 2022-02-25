@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+
+# Remove everthing except `.devcontainer` from GitHub Release Packager
+.editorconfig export-ignore
+.gitattributes export-ignore
+.github export-ignore
+docs export-ignore
+LICENSE export-ignore
+README.md export-ignore

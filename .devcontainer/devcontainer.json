@@ -1,0 +1,176 @@
+{
+	// Name of VS Code Remote Container
+    "name": "SFCC",
+
+    // Docker User on Container ( leave as "node" )
+    "remoteUser": "node",
+
+    // Docker Build Settings
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+            // Node.js version (use -bullseye variants on local arm64/Apple Silicon):
+            // 16, 14, 12, 16-bullseye, 14-bullseye, 12-bullseye, 16-buster, 14-buster, 12-buster
+            "VARIANT": "16-bullseye"
+        }
+	},
+
+    // Argument to pass to Docker Build's Run Command
+    "runArgs": [
+        // Need Environmental Variables? Make `.devcontainer/devcontainer.env` and uncomment the next line
+        // "--env-file", ".devcontainer/devcontainer.env",
+
+        // Name of Docker Container
+        "--name", "sfcc-remote"
+    ],
+
+    // Handle Port Forwarding for VS Code Container to Local Machine Ports
+    "portsAttributes": {
+        // Add support for Prophet Debugger
+		"60606": {
+			"label": "Prophet Debugger Remote",
+			"onAutoForward": "silent"
+		}
+	},
+
+    // Virtual Mounted Volumes to make Containers perform better
+    "mounts": [
+        // Add Support for Bash History
+        "source=sfcc-remote-bashhistory,target=/commandhistory,type=volume",
+
+        // Store VS Code Extensions to their own volume to prevent reinstalling
+        "source=sfcc-remote-extensions,target=/home/node/.vscode-server/extensions,type=volume",
+        "source=sfcc-remote-extensions-insiders,target=/home/node/.vscode-server-insiders/extensions,type=volume"
+    ],
+
+    // VS Code Container Settings
+	"settings": {
+        // Window Settings
+        "window.title": "SFCC${separator}Remote${separator}${activeEditorShort}",
+
+        // Editor Settings
+        "editor.cursorBlinking": "smooth",
+        "editor.cursorSmoothCaretAnimation": true,
+        "editor.cursorStyle": "line-thin",
+        "editor.fontFamily": "'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+        "editor.fontLigatures": true,
+        "editor.insertSpaces": true,
+        "editor.multiCursorModifier": "alt",
+        "editor.tabSize": 4,
+        "editor.trimAutoWhitespace": true,
+
+        // DIFF Editor Settings
+        "diffEditor.ignoreTrimWhitespace": true,
+
+        // Terminal Settings
+        "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+        "terminal.integrated.enableBell": true,
+        "terminal.integrated.cursorBlinking": true,
+        "terminal.integrated.fontSize": 12,
+
+        // File System Settings
+        "files.eol": "\n",
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "files.exclude": {
+            "**/.DS_Store": true,
+            "**/.git": true,
+            "**/.hg": true,
+            "**/.svn": true,
+            "**/*.git": true,
+            "**/CVS": true,
+            "**/Thumbs.db": true
+        },
+
+        // Files to Exclude from Search results
+        "search.exclude": {
+            "**/node_modules": true,
+            "**/package-lock.json": true,
+            "cartridge/static/*/css": true,
+            "cartridge/static/*/js": true,
+            "node_modules": true,
+        },
+
+        // Prophet Debugger Extension Settings
+        "extension.prophet.clean.on.start": false,
+        "extension.prophet.htmlhint.enabled": true,
+        "extension.prophet.ignore.list": ["node_modules", "\\.git", "\\.zip$"],
+        "extension.prophet.script.server.disable.diagnostics": false,
+        "extension.prophet.upload.enabled": true,
+
+        // Live Share Extension Settings
+        "liveshare.guestApprovalRequired": true,
+        "liveshare.anonymousGuestApproval": "reject",
+        "liveshare.shareExternalFiles": false,
+
+        // Add DevOps Scripts copied from `.devcontainer/docker-assets/scripts` to /usr/local/lib/sfcc-remote/
+        "script-runner.statusBar": true,
+        "script-runner.definitions": {
+            "commands": [
+                {
+                    "identifier": "clean-install",
+                    "description": "Clean Install - Purge All `node_modules` & Run Installer",
+                    "command": "/usr/local/lib/sfcc-remote/clean-install",
+                    "working_directory": "/workspaces/sfcc-vscode-remote"
+                }
+            ]
+        },
+
+        // Spell Checker Words to Ignore
+        "cSpell.words": [
+            "abumalick",
+            "bashhistory",
+            "codezombiech",
+            "commandhistory",
+            "devcontainer",
+            "eamodio",
+            "easterapps",
+            "fabiowquixada",
+            "FiraCode",
+            "htmlhint",
+            "kohler",
+            "liveshare",
+            "Menlo",
+            "mhutchie",
+            "mikestead",
+            "monospace",
+            "pikamachu",
+            "Tyriar",
+            "wayou",
+            "wmaurer"
+        ]
+    },
+
+    // VS Code Extensions to Install on Container Build
+	"extensions": [
+        // SFCC Productivity Pack Extensions
+        "DotJoshJohnson.xml",
+        "eamodio.gitlens",
+        "fabiowquixada.vscode-isml-linter",
+        "pikamachu.require-cartridge-resolve",
+        "SqrTT.prophet",
+        "wayou.vscode-todo-highlight",
+
+        // Microsoft Live Share Extensions
+        "MS-vsliveshare.vsliveshare",
+        "MS-vsliveshare.vsliveshare-audio",
+
+        // Helpful Development Team Extensions
+        "aaron-bond.better-comments",
+        "abumalick.vscode-nvm",
+        "christian-kohler.npm-intellisense",
+        "codezombiech.gitignore",
+        "EditorConfig.EditorConfig",
+        "eg2.vscode-npm-script",
+        "HookyQR.JSDocTagComplete",
+        "mhutchie.git-graph",
+        "mikestead.dotenv",
+        "streetsidesoftware.code-spell-checker",
+        "Tyriar.sort-lines",
+        "wmaurer.change-case",
+        "easterapps.script-runner",
+
+        // Red Van Workshop Developer Extensions
+        "RedVanWorkshop.explorer-exclude-vscode-extension"
+	]
+}
