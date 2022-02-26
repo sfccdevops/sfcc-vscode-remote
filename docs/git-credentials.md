@@ -1,6 +1,6 @@
 ![Logo](https://red-van-workshop.s3.us-east-1.amazonaws.com/logo.png "Logo")
 
-:arrow_backward: **[BACK](../README.md#developer-setup)**
+:arrow_backward: **[BACK](./repository-setup.md#repository-setup)**
 
 Git Credentials
 ===
@@ -163,4 +163,4 @@ sudo apt-get update && sudo apt-get install gnupg2 -y
 Up Next
 ---
 
-[![Up Next](https://img.shields.io/badge/Next-Usage_Instructions-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./usage-instructions.md)
+[![Up Next](https://img.shields.io/badge/Next-Usage_Instructions-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./usage-instructions.md#usage-instructions)

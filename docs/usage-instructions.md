@@ -1,6 +1,6 @@
 ![Logo](https://red-van-workshop.s3.us-east-1.amazonaws.com/logo.png "Logo")
 
-:arrow_backward: **[BACK](../README.md#developer-setup)**
+:arrow_backward: **[BACK](./git-credentials.md#git-credentials)**
 
 Usage Instructions
 ===
@@ -17,4 +17,4 @@ Need Help ?
 
 > That's it, you're all setup.  If you got stuck along the way, checkout our Troubleshooting document.
 
-[![Troubleshooting](https://img.shields.io/badge/Need_help-Troubleshooting-orange.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./troubleshooting.md)
+[![Troubleshooting](https://img.shields.io/badge/Need_help-Troubleshooting-orange.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./troubleshooting.md#troubleshooting)
