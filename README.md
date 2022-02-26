@@ -31,13 +31,13 @@ Getting Started
 
 ### Organization Setup
 
-1. [Repository Setup](docs/repository-setup.md)
+1. [Repository Setup](docs/repository-setup.md#repository-setup)
 
 ### Developer Setup
 
-1. [Git Credentials](docs/git-credentials.md)
-2. [Usage Instructions](docs/usage-instructions.md)
-3. [Troubleshooting](docs/troubleshooting.md)
+1. [Git Credentials](docs/git-credentials.md#git-credentials)
+2. [Usage Instructions](docs/usage-instructions.md#usage-instructions)
+3. [Troubleshooting](docs/troubleshooting.md#troubleshooting)
 
 Benefits
 ---
