@@ -7,6 +7,17 @@ Troubleshooting
 
 This document will contain a list of known issues, and how to solve them.
 
+SSH Keys
+---
+
+VS Code Remove Developer Containers require that SSH Keys installed on the host computer be added to the `ssh-agent` so VS Code can access them from the Docker Virtual Machine.  When this goes wrong, you can see a few errors.
+
+### GitHub
+
+`git@github.com: Permission denied (publickey)`
+
+If you are seeing this kind of error, you'll need to make sure you review [Sharing Git credentials with your container](https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container)
+
 Docker
 ---
 
@@ -17,3 +28,13 @@ Having Docker issues? It happens to the best of us.  I find going nuclear is the
 ```bash
 docker system prune -a
 ```
+
+Live Share
+---
+
+The quickest way to tell if Live Share is broken ( sadly, it happens more than it should ), you can check your status bar in the footer of VS Code.  If you do not see `Live Share` in the status bar, then it broke.
+
+### Here is how to fix the issue:
+
+1. Press <kbd>F1</kbd> to open the Command Palette
+2. Select `Live Share: Repair Installation` and let it run

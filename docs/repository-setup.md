@@ -3,7 +3,8 @@
 :arrow_backward: **[BACK](../README.md)**
 
 Repository Setup
----
+===
+
 > Before your Dev Team can use this VS Code Remote Development Container, you'll first need to:
 
 1. Download the `Assets > Source code (zip)` file from our [Latest Release](https://github.com/redvanworkshop/sfcc-vscode-remote/releases/latest)
@@ -15,4 +16,4 @@ Repository Setup
 Up Next
 ---
 
-[![Up Next](https://img.shields.io/badge/Next-Usage_Instructions-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./usage-instructions.md)
+[![Up Next](https://img.shields.io/badge/Next-Git_Credentials-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./git-credentials.md)

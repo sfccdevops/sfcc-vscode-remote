@@ -29,7 +29,13 @@ Demo Video
 Getting Started
 ---
 
+### Organization Setup
+
 1. [Repository Setup](docs/repository-setup.md)
+
+### Developer Setup
+
+1. [Git Credentials](docs/git-credentials.md)
 2. [Usage Instructions](docs/usage-instructions.md)
 3. [Troubleshooting](docs/troubleshooting.md)
 

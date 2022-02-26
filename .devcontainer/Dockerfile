@@ -8,8 +8,7 @@ LABEL version="1.0.0"
 
 # Support Signed Commit Messages
 RUN sudo apt-get update \
-    && export DEBIAN_FRONTEND=noninteractive \
-    && sudo apt-get install gnupg2 -y --no-install-recommends
+    && sudo apt-get install gnupg2 -y
 
 # Install helpful scripts
 RUN sudo apt-get install exa wget -y

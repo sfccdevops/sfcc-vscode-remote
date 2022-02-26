@@ -2,15 +2,15 @@
 
 :arrow_backward: **[BACK](../README.md)**
 
-Usage Instruction
----
+Usage Instructions
+===
 
-> To get started using your Development Container in VS Code, you'll need:
+> To get started using your Remote Development Container in VS Code, you'll need:
 
-1. Download the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension from the VS Code Extension Marketplace.
-2. Install [Docker Desktop](https://www.docker.com/products/docker-desktop) and Start the Application
-3. Make sure you have setup SSH Keys on your local developer machine ( not from within this container ) to be accessible via the [SSH Agent](https://code.visualstudio.com/docs/remote/containers#_using-ssh-keys).
-4. Open your teams project repository in VS code. It should detect and prompt you to re-open in remote container.  If it does not, you can do this manually by pressing <kbd>F1</kbd> and locating `Remote-Containers: Reopen in Container`
+1. Download and install [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
+2. Install [Docker Desktop](https://www.docker.com/products/docker-desktop) and wait for it to Start
+3. Open your teams project repository in VS code. It should detect and prompt you to re-open in remote container.  If it does not, you can do this manually by pressing <kbd>F1</kbd> and locating `Remote-Containers: Reopen in Container`
+
 
 Need Help ?
 ---
