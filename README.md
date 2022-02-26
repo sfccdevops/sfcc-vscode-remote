@@ -33,13 +33,15 @@ Benefits
 ---
 
 <details><summary>Remote Container is Version Controlled</summary>
+<br>
 
 > **This means you can Version Control your teams Dev Environment.**
 >
-> Need to work on updating to a new version of Node? Need to update your Team's Linter or Code Formatting Rules? Maybe you want to try out a new VS Code Extension with your entire Team? No problem! Make a branch, change some settings in the container config, and VS Code will prompt anyone switching to that branch to rebuild their Dev Environment. When they switch back, their environment can as well.
+> Need to work on updating to a new version of Node? Need to update your Team's Linter or Code Formatting Rules? Maybe you want to try out a new VS Code Extension with your entire Team? No problem! Make a branch, change some settings in the container config, and VS Code will prompt anyone switching to that branch to rebuild their Dev Environment. When they switch back, their environment can as well. 
 
 </details>
 <details><summary>Cross-Platform Virtual Environment</summary>
+<br>
 
 > **Not everyone works on macOS laptops!**
 >
@@ -47,6 +49,7 @@ Benefits
 
 </details>
 <details><summary>Pair Programming for Entire Team</summary>
+<br>
 
 > **Pair Programming and Group Chat Already Installed.**
 >
@@ -54,6 +57,7 @@ Benefits
 
 </details>
 <details><summary>Run Custom DevOps Scripts</summary>
+<br>
 
 > **Executing Commands on your Dev Environment from VS Code.**
 >
@@ -61,6 +65,7 @@ Benefits
 
 </details>
 <details><summary>Easy to Customize for Your Team</summary>
+<br>
 
 > **Not every Dev Team works the same way, and that's OK.**
 >
@@ -72,6 +77,7 @@ Frequently Asked Questions
 ---
 
 <details><summary>What's the Difference?</summary>
+<br>
 
 > **That's a Great Question, and an important one to consider for your Team.**
 >
@@ -79,6 +85,7 @@ Frequently Asked Questions
 
 </details>
 <details><summary>What about my Custom Theme?</summary>
+<br>
 
 > **Each Developer has their style, and there's no need to change that.**
 >
@@ -86,6 +93,7 @@ Frequently Asked Questions
 
 </details>
 <details><summary>Will my SSH Keys Still Work?</summary>
+<br>
 
 > **Remote Containers will be hard to use on a team if they don't.**
 >
@@ -93,6 +101,7 @@ Frequently Asked Questions
 
 </details>
 <details><summary>Will Signed Commit Messages Work?</summary>
+<br>
 
 > **Some Dev Teams will need to make sure Git Commits can be signed.**
 >
@@ -100,6 +109,7 @@ Frequently Asked Questions
 
 </details>
 <details><summary>Can we Configure the Container?</summary>
+<br>
 
 > **Not every Dev Team will want the same thing.**
 >
