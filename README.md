@@ -15,12 +15,16 @@ SFCC › VS Code › Remote Development Container
 
 [![Get Started](https://img.shields.io/badge/Let's_Get_Started-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](#getting-started)
 
+**Not your first time here?**
+
+[![Get Started](https://img.shields.io/badge/Download-gray.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](https://github.com/redvanworkshop/sfcc-vscode-remote/releases/latest)
+
 Demo Video
 ---
 
 > Want a quick walkthough on how to use our Remote Container?
 
-[![Play Demo Video](https://via.placeholder.com/320x180?text=Demo+Video)](# "Play Demo Video")
+[![Play Demo Video](https://via.placeholder.com/480x270?text=Demo+Video)](# "Play Demo Video")
 
 Getting Started
 ---
@@ -37,7 +41,7 @@ Benefits
 
 > **This means you can Version Control your teams Dev Environment.**
 >
-> Need to work on updating to a new version of Node? Need to update your Team's Linter or Code Formatting Rules? Maybe you want to try out a new VS Code Extension with your entire Team? No problem! Make a branch, change some settings in the container config, and VS Code will prompt anyone switching to that branch to rebuild their Dev Environment. When they switch back, their environment can as well. 
+> Need to work on updating to a new version of Node? Need to update your Team's Linter or Code Formatting Rules? Maybe you want to try out a new VS Code Extension with your entire Team? No problem! Make a branch, change some settings in the container config, and VS Code will prompt anyone switching to that branch to rebuild their Dev Environment. When they switch back, their environment can as well.
 
 </details>
 <details><summary>Cross-Platform Virtual Environment</summary>
