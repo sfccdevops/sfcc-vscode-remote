@@ -35,6 +35,8 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@address"
 ```
 
+IMPORTANT: You will want to perform this task on BOTH your Local machine, and the Developer Container.
+
 macOS
 ---
 
