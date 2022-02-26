@@ -1,6 +1,6 @@
 ![Logo](https://red-van-workshop.s3.us-east-1.amazonaws.com/logo.png "Logo")
 
-:arrow_backward: **[BACK](../README.md)**
+:arrow_backward: **[BACK](../README.md#developer-setup)**
 
 Troubleshooting
 ===
