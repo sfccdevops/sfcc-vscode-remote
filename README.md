@@ -17,7 +17,7 @@ SFCC › VS Code › Remote Development Container
 
 **Not your first time here?**
 
-[![Get Started](https://img.shields.io/badge/Download-gray.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](https://github.com/redvanworkshop/sfcc-vscode-remote/releases/latest)
+[![Get Started](https://img.shields.io/badge/Download-gray.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](https://github.com/redvanworkshop/sfcc-vscode-remote/archive/refs/heads/develop.zip)
 
 Demo Video
 ---
