@@ -5,7 +5,7 @@
 Git Credentials
 ===
 
-> Before you get too far into things, let's go ahead and get your local developer machine ready to work with containers:
+> Before you get too far into things, let's get your local developer machine ready to work with containers:
 
 **NOTE:** These instructions are just the most common requirements that should meed _most_ developers needs, and are likely _already_ setup on your machine. See [Sharing Git credentials with your container](https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container) for more specific setup requirements.  If you have not already created SSH Keys, follow the instructions on [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) or [BitBucket](https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/).
 
@@ -35,7 +35,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@address"
 ```
 
-IMPORTANT: You will want to perform this task on BOTH your Local machine, and the Developer Container.
+IMPORTANT: You will want to perform this task with the exact same values on BOTH your Local machine, and the Developer Container.
 
 macOS
 ---
