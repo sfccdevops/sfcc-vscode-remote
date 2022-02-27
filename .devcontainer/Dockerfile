@@ -18,9 +18,6 @@ RUN mkdir -p /usr/local/lib/sfcc-remote
 COPY docker-assets/scripts/* /usr/local/lib/sfcc-remote
 RUN sudo chmod +x /usr/local/lib/sfcc-remote/*
 
-# Copy Fonts for Nicer Terminal
-COPY docker-assets/fonts/*.ttf /usr/local/share/fonts
-
 # Copy / Replace Dot Files
 COPY docker-assets/dotfiles/.* /home/node
 
