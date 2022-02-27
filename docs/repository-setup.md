@@ -16,4 +16,4 @@ Repository Setup
 Up Next
 ---
 
-[![Up Next](https://img.shields.io/badge/Next-Git_Credentials-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./git-credentials.md#git-credentials)
+[![Up Next](https://img.shields.io/badge/Next-Prerequisites-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./prerequisites.md#prerequisites)

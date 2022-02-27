@@ -1,6 +1,6 @@
 ![Logo](https://red-van-workshop.s3.us-east-1.amazonaws.com/logo.png "Logo")
 
-:arrow_backward: **[BACK](./repository-setup.md#repository-setup)**
+:arrow_backward: **[BACK](./prerequisites.md#prerequisites)**
 
 Git Credentials
 ===
@@ -26,6 +26,7 @@ You can check what your current Global Git Config settings are by running the fo
 ```bash
 git config --global user.name
 git config --global user.email
+git config --global pull.rebase
 ```
 
 If either of these failed to return results, you can set them by running the following:
@@ -33,6 +34,11 @@ If either of these failed to return results, you can set them by running the fol
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@address"
+# Container will ask you to specify this before you can use `git pull`
+# hint: git config pull.rebase false  # merge (the default strategy)
+# hint: git config pull.rebase true   # rebase
+# hint: git config pull.ff only       # fast-forward only
+git config --global pull.rebase false
 ```
 
 IMPORTANT: You will want to perform this task with the exact same values on BOTH your Local machine, and the Developer Container.

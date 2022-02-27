@@ -30,23 +30,13 @@
 		"60606": {
 			"label": "Prophet Debugger Remote",
 			"onAutoForward": "silent"
-		},
-
-        // Add support for Live Share
-        "5990": {
-            "label": "Live Share Remote",
-			"onAutoForward": "silent"
-        }
+		}
 	},
 
     // Virtual Mounted Volumes to make Containers perform better
     "mounts": [
         // Add Support for Bash History
-        "source=sfcc-remote-bashhistory,target=/commandhistory,type=volume",
-
-        // Store VS Code Extensions to their own volume to prevent reinstalling
-        "source=sfcc-remote-extensions,target=/home/node/.vscode-server/extensions,type=volume",
-        "source=sfcc-remote-extensions-insiders,target=/home/node/.vscode-server-insiders/extensions,type=volume"
+        "source=sfcc-remote-bashhistory,target=/commandhistory,type=volume"
     ],
 
     // VS Code Container Settings
@@ -57,6 +47,9 @@
         // Editor Settings
         "editor.fontLigatures": true,
         "editor.insertSpaces": true,
+        "editor.lightbulb.enabled": false,
+        "editor.quickSuggestionsDelay": 150,
+        "editor.snippetSuggestions": "top",
         "editor.tabSize": 4,
         "editor.trimAutoWhitespace": true,
 
@@ -132,11 +125,14 @@
             "bashhistory",
             "codezombiech",
             "commandhistory",
+            "DavidAnson",
             "devcontainer",
             "eamodio",
             "easterapps",
             "fabiowquixada",
+            "finico",
             "FiraCode",
+            "formulahendry",
             "htmlhint",
             "kohler",
             "liveshare",
@@ -145,45 +141,53 @@
             "mikestead",
             "mkdir",
             "monospace",
+            "nikhilkumar80",
             "pikamachu",
             "pinentry",
             "publickey",
+            "rafamel",
             "socat",
             "socat",
             "Tyriar",
             "wayou",
-            "wmaurer",
+            "wmaurer"
         ]
     },
 
     // VS Code Extensions to Install on Container Build
 	"extensions": [
         // SFCC Productivity Pack Extensions
-        "DotJoshJohnson.xml",
-        "eamodio.gitlens",
-        "fabiowquixada.vscode-isml-linter",
-        "pikamachu.require-cartridge-resolve",
-        "SqrTT.prophet",
-        "wayou.vscode-todo-highlight",
+        "DotJoshJohnson.xml",                       // XML Tools
+        "eamodio.gitlens",                          // GitLens — Git supercharged
+        "fabiowquixada.vscode-isml-linter",         // ISML Linter
+        "pikamachu.require-cartridge-resolve",      // Require cartridge resolve
+        "SqrTT.prophet",                            // Prophet Debugger
+        "wayou.vscode-todo-highlight",              // TODO Highlight
 
         // Microsoft Live Share Extensions
-        "MS-vsliveshare.vsliveshare",
-        "MS-vsliveshare.vsliveshare-audio",
+        "MS-vsliveshare.vsliveshare-audio",         // Live Share Audio
+        "MS-vsliveshare.vsliveshare",               // Live Share
 
         // Helpful Development Team Extensions
-        "aaron-bond.better-comments",
-        "abumalick.vscode-nvm",
-        "christian-kohler.npm-intellisense",
-        "codezombiech.gitignore",
-        "EditorConfig.EditorConfig",
-        "eg2.vscode-npm-script",
-        "HookyQR.JSDocTagComplete",
-        "mhutchie.git-graph",
-        "mikestead.dotenv",
-        "streetsidesoftware.code-spell-checker",
-        "Tyriar.sort-lines",
-        "wmaurer.change-case",
-        "easterapps.script-runner",
+        "aaron-bond.better-comments",               // Better Comments
+        "abumalick.vscode-nvm",                     // vscode nvm integration
+        "christian-kohler.npm-intellisense",        // npm Intellisense
+        "christian-kohler.path-intellisense",       // Path Intellisense
+        "codezombiech.gitignore",                   // gitignore
+        "DavidAnson.vscode-markdownlint",           // markdownlint
+        "easterapps.script-runner",                 // Script Runner
+        "EditorConfig.EditorConfig",                // EditorConfig for VS Code
+        "eg2.vscode-npm-script",                    // npm ( from Microsoft )
+        "finico.quickOpenSelection",                // Quick Open Selection
+        "formulahendry.auto-rename-tag",            // Auto Rename Tag
+        "HookyQR.JSDocTagComplete",                 // Complete JSDoc Tags
+        "mhutchie.git-graph",                       // Git Graph
+        "mikestead.dotenv",                         // DotENV
+        "nikhilkumar80.js-patterns-snippets",       // JavaScript Patterns Snippets
+        "rafamel.subtle-brackets",                  // Subtle Match Brackets
+        "streetsidesoftware.code-spell-checker",    // Code Spell Checker
+        "Tyriar.sort-lines",                        // Sort lines
+        "wmaurer.change-case",                      // Change Case,
 
         // Red Van Workshop Developer Extensions
         "RedVanWorkshop.explorer-exclude-vscode-extension"

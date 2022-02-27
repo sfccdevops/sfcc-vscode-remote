@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+#
+# description: Common Functions and Constants used in different scripts
+# author: Peter Schmalfeldt <peter@redvanworkshop.com>
+
+# This is the Base Path for VS Code Container
+PROJECT_BASE='/workspaces/sfcc-vscode-remote'
+
+# You can customize this for your project
+PROJECT_NAME="SFCC REMOTE"
+
+# Supress Node Warnings Globally
+export NODE_NO_WARNINGS=1
+
+# Formatted Confirmation Prompt
+confirm(){
+    echo -ne "\n\033[38;5;220m⚠ $1\033[0m"
+}
+
+# Formatted Error Output from Within Script
+error(){
+    TEXT=$( echo $1 | tr '\n' ' ')
+    echo -e "\n\033[38;5;196m× $TEXT\033[0m\n"
+}
+
+# Make Header Outout for Starting Script
+make_header(){
+    TEXT=$( echo $1 | tr '\n' ' ')
+    echo -e "\n\033[48;5;22m  $PROJECT_NAME › $TEXT  \033[0m"
+}
+
+# Formatted Notice Output from Within Script
+notice(){
+    TEXT=$( echo $1 | tr '\n' ' ')
+    echo -e "\033[38;5;220m→ $TEXT\033[0m\n"
+}
+
+# Formatted Output from Within Script
+output(){
+    TEXT=$( echo $1 | tr '\n' ' ')
+    echo -e "\n\033[7m › \033[27m $TEXT"
+}
+
+# Formatted Success Output from Within Script
+success(){
+    TEXT=$( echo $1 | tr '\n' ' ')
+    echo -e "\n\033[38;5;34m✓ $TEXT\033[0m\n"
+}

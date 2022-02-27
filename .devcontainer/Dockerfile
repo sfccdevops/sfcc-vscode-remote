@@ -34,13 +34,6 @@ RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhisto
     && chown -R node /commandhistory \
     && echo $SNIPPET >> /home/node/.bashrc
 
-# Persist VS Code Extensions
-RUN mkdir -p /home/node/.vscode-server/extensions \
-    /home/node/.vscode-server-insiders/extensions \
-    && chown -R node \
-    /home/node/.vscode-server \
-    /home/node/.vscode-server-insiders
-
 # Add Support for Live Share
 RUN wget -O ~/vsls-reqs https://raw.githubusercontent.com/MicrosoftDocs/live-share/master/scripts/linux-prereqs.sh \
     --no-check-certificate \

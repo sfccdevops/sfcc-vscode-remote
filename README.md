@@ -35,9 +35,13 @@ Getting Started
 
 ### Developer Setup
 
-1. [Git Credentials](docs/git-credentials.md#git-credentials)
-2. [Usage Instructions](docs/usage-instructions.md#usage-instructions)
-3. [Troubleshooting](docs/troubleshooting.md#troubleshooting)
+1. [Prerequisites](docs/prerequisites.md#prerequisites)
+2. [Git Credentials](docs/git-credentials.md#git-credentials)
+3. [Usage Instructions](docs/usage-instructions.md#usage-instructions)
+
+> If you got stuck along the way, checkout our Troubleshooting document.
+
+[![Troubleshooting](https://img.shields.io/badge/Need_help-Troubleshooting-orange.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](docs/troubleshooting.md#troubleshooting)
 
 Benefits
 ---

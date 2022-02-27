@@ -1,56 +1,22 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
-# description: Bash file to manage NPM Installs
+# description: Bash file to perform a Clean Install of Project
 # author: Peter Schmalfeldt <peter@redvanworkshop.com>
 
-# Change to Project Root
-BASE='/workspaces/sfcc-vscode-remote'
-
-APP_NAME="SFCC REMOTE"
-
-# Supress Node Warnings Globally
-export NODE_NO_WARNINGS=1
-
-make_header(){
-    TEXT=$( echo $1 | tr '\n' ' ')
-    echo -e "\n\033[48;5;22m  $APP_NAME › $TEXT  \033[0m"
-}
-
-output(){
-    TEXT=$( echo $1 | tr '\n' ' ')
-    echo -e "\n\033[7m › \033[27m $TEXT"
-}
-
-error(){
-    TEXT=$( echo $1 | tr '\n' ' ')
-    echo -e "\n\033[38;5;196m× $TEXT\033[0m\n"
-}
-
-success(){
-    TEXT=$( echo $1 | tr '\n' ' ')
-    echo -e "\n\033[38;5;34m✓ $TEXT\033[0m\n"
-}
-
-notice(){
-    TEXT=$( echo $1 | tr '\n' ' ')
-    echo -e "\033[38;5;220m→ $TEXT\033[0m\n"
-}
-
-confirm(){
-    echo -ne "\n\033[38;5;220m⚠ $1\033[0m"
-}
+# Import Common Functions and Constants
+source common
 
 make_header "CLEAN INSTALL"
 
 # Make sure we are in the root of the project
-if test -f "$BASE/dw.json"; then
+if test -f "$PROJECT_BASE/dw.json"; then
   # Check if we want to remove existing node modules folders
   confirm "Remove node_modules folders? (y or n): "
   read CONFIRM
   case $CONFIRM in
     y|Y|YES|yes|Yes)
       output "Removing existing node_modules folders ..."
-      find $BASE -name 'node_modules' -type d -prune -exec rm -rf '{}' +
+      find $PROJECT_BASE -name 'node_modules' -type d -prune -exec rm -rf '{}' +
     ;;
     n|N|no|NO|No)
     ;;
@@ -73,12 +39,16 @@ if test -f "$BASE/dw.json"; then
   esac
 
   # Install NPM Packages in Workspace Root
-  if test -f "$BASE/package.json"; then
+  if test -f "$PROJECT_BASE/package.json"; then
     output "Installing Base NPM Packages"
     npm install --no-optional --loglevel error --no-audit
   else
     error "Missing package.json"
   fi
+
+  # ==================================================
+  # PUT YOUR DEV TEAMS CUSTOM INSTALLER CODE BELOW
+  # ==================================================
 
   success "ALL DONE"
 else
