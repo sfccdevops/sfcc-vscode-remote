@@ -154,11 +154,13 @@
             "mkdir",
             "monospace",
             "pikamachu",
+            "pinentry",
             "publickey",
+            "socat",
             "socat",
             "Tyriar",
             "wayou",
-            "wmaurer"
+            "wmaurer",
         ]
     },
 
