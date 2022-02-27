@@ -46,5 +46,6 @@ RUN mkdir -p /home/node/.vscode-server/extensions \
 
 # Add Support for Live Share
 RUN wget -O ~/vsls-reqs https://raw.githubusercontent.com/MicrosoftDocs/live-share/master/scripts/linux-prereqs.sh \
+    --no-check-certificate \
     && chmod +x ~/vsls-reqs \
     && ~/vsls-reqs

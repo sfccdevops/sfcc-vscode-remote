@@ -58,7 +58,7 @@
         "editor.cursorBlinking": "smooth",
         "editor.cursorSmoothCaretAnimation": true,
         "editor.cursorStyle": "line-thin",
-        "editor.fontFamily": "'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+        "editor.fontFamily": "'FiraCode NF', Menlo, Monaco, 'Courier New', monospace",
         "editor.fontLigatures": true,
         "editor.insertSpaces": true,
         "editor.multiCursorModifier": "alt",
@@ -69,15 +69,14 @@
         "diffEditor.ignoreTrimWhitespace": true,
 
         // Terminal Settings
-        "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+        "terminal.integrated.fontFamily": "'FiraCode NF', Menlo, Monaco, 'Courier New', monospace",
         "terminal.integrated.enableBell": true,
         "terminal.integrated.cursorBlinking": true,
-        "terminal.integrated.fontSize": 12,
 
         // File System Settings
         "files.eol": "\n",
         "files.trimTrailingWhitespace": true,
-        "files.insertFinalNewline": true,
+        "files.insertFinalNewline": true, // This is needed to prevent line ending warnings on GitHub
         "files.exclude": {
             "**/.DS_Store": true,
             "**/.git": true,
