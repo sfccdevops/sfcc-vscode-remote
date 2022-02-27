@@ -4,7 +4,7 @@
 # author: Peter Schmalfeldt <peter@redvanworkshop.com>
 
 # Import Common Functions and Constants
-source common
+source /usr/local/lib/sfcc-remote/common
 
 make_header "CLEAN INSTALL"
 
