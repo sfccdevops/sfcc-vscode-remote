@@ -36,7 +36,10 @@
     // Virtual Mounted Volumes to make Containers perform better
     "mounts": [
         // Add Support for Bash History
-        "source=sfcc-remote-bashhistory,target=/commandhistory,type=volume"
+        "source=sfcc-remote-bashhistory,target=/commandhistory,type=volume",
+
+        // Mount a Copy of Git Config to Container to Inherit Local Global Settings
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/node/.gitconfig,type=bind,consistency=cached",
     ],
 
     // VS Code Container Settings
@@ -187,7 +190,7 @@
         "rafamel.subtle-brackets",                  // Subtle Match Brackets
         "streetsidesoftware.code-spell-checker",    // Code Spell Checker
         "Tyriar.sort-lines",                        // Sort lines
-        "wmaurer.change-case",                      // Change Case,
+        "wmaurer.change-case",                      // Change Case
 
         // Red Van Workshop Developer Extensions
         "RedVanWorkshop.explorer-exclude-vscode-extension"

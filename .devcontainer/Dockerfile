@@ -23,6 +23,7 @@ COPY docker-assets/dotfiles/.* /home/node
 
 # Configure Git to use Global .gitattributes to prevent EOL and Whitespace Conflicts
 RUN su node -c "git config --global core.attributesfile /home/node/.gitattributes"
+RUN su node -c "git config --global pull.rebase false"
 
 # Enable Node Version Manager
 RUN su node -c "umask 0002 && . /usr/local/share/nvm/nvm.sh"
