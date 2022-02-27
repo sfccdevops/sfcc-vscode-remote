@@ -3,9 +3,9 @@
 *.{bat,[bB][aA][tT]} text eol=crlf
 
 # Remove everthing except `.devcontainer` from GitHub Release Packager
-.editorconfig export-ignore
-.gitattributes export-ignore
-.github export-ignore
-docs export-ignore
-LICENSE export-ignore
-README.md export-ignore
+/.editorconfig export-ignore
+/.gitattributes export-ignore
+/.github export-ignore
+/docs export-ignore
+/LICENSE export-ignore
+/README.md export-ignore
