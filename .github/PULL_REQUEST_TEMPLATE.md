@@ -24,8 +24,6 @@ Documentation
 
 > Screenshots, Attachments, Linked GitHub Issues, etc ( optional )
 
-
-
 #### What GIF best describes this PR or how it makes you feel?
 
 > Drag & Drop Something Fun Here ( optional )

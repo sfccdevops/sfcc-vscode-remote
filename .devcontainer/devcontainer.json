@@ -1,19 +1,19 @@
 {
-	// Name of VS Code Remote Container
+    // Name of VS Code Remote Container
     "name": "SFCC",
 
     // Docker User on Container ( leave as "node" )
     "remoteUser": "node",
 
     // Docker Build Settings
-	"build": {
-		"dockerfile": "Dockerfile",
-		"args": {
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
             // Node.js version (use -bullseye variants on local arm64/Apple Silicon):
             // 16, 14, 12, 16-bullseye, 14-bullseye, 12-bullseye, 16-buster, 14-buster, 12-buster
             "VARIANT": "16-bullseye"
         }
-	},
+    },
 
     // Argument to pass to Docker Build's Run Command
     "runArgs": [
@@ -27,11 +27,11 @@
     // Handle Port Forwarding for VS Code Container to Local Machine Ports
     "portsAttributes": {
         // Add support for Prophet Debugger
-		"60606": {
-			"label": "Prophet Debugger Remote",
-			"onAutoForward": "silent"
-		}
-	},
+        "60606": {
+            "label": "Prophet Debugger Remote",
+            "onAutoForward": "silent"
+        }
+    },
 
     // Virtual Mounted Volumes to make Containers perform better
     "mounts": [
@@ -40,7 +40,7 @@
     ],
 
     // VS Code Container Settings
-	"settings": {
+    "settings": {
         // Window Settings
         "window.title": "SFCC${separator}Remote${separator}${activeEditorShort}",
 
@@ -155,7 +155,7 @@
     },
 
     // VS Code Extensions to Install on Container Build
-	"extensions": [
+    "extensions": [
         // SFCC Productivity Pack Extensions
         "DotJoshJohnson.xml",                       // XML Tools
         "eamodio.gitlens",                          // GitLens — Git supercharged
@@ -191,5 +191,5 @@
 
         // Red Van Workshop Developer Extensions
         "RedVanWorkshop.explorer-exclude-vscode-extension"
-	]
+    ]
 }
