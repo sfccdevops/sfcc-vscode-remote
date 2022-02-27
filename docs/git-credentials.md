@@ -63,6 +63,8 @@ Windows
 
 Regardless if you are using PowerShell or Windows Subsystem for Linux (WSL), you will still need to use the instructions for PowerShell.  Well cover WSL specific instructions as well.
 
+NOTE: If you do not already use [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701), it makes switching back and forth between PowerShell & WSL terminal windows.
+
 **STEP 1. PowerShell Setup:**
 
 Open **PowerShell** as an **Administrator** and run:
