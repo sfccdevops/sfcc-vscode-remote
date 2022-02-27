@@ -11,7 +11,7 @@ make_header "CLEAN INSTALL"
 # Make sure we are in the root of the project
 if test -f "$PROJECT_BASE/dw.json"; then
   # Check if we want to remove existing node modules folders
-  confirm "Remove node_modules folders? (y or n): "
+  confirm "Remove node_modules folders? ( Y or N ): "
   read CONFIRM
   case $CONFIRM in
     y|Y|YES|yes|Yes)
@@ -21,11 +21,11 @@ if test -f "$PROJECT_BASE/dw.json"; then
     n|N|no|NO|No)
     ;;
     *)
-      notice "Please enter only y or n"
+      notice "Please enter only Y or N"
   esac
 
   # Check if we want to reset NPM Cache
-  confirm "Clean NPM Cache? (y or n): "
+  confirm "Clean NPM Cache? ( Y or N ): "
   read CONFIRM
   case $CONFIRM in
     y|Y|YES|yes|Yes)
@@ -35,7 +35,7 @@ if test -f "$PROJECT_BASE/dw.json"; then
     n|N|no|NO|No)
     ;;
     *)
-    notice "Please enter only y or n"
+    notice "Please enter only Y or N"
   esac
 
   # Install NPM Packages in Workspace Root

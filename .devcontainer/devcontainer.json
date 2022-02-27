@@ -117,6 +117,39 @@
                     "description": "Clean Install - Purge All `node_modules` & Run Installer",
                     "command": "/usr/local/lib/sfcc-remote/clean-install",
                     "working_directory": "/workspaces/sfcc-vscode-remote"
+                },
+                {
+                    "identifier": "git-revert",
+                    "description": "Git Reset - Revert to a Previous Commit ...",
+                    "command": "/usr/local/lib/sfcc-remote/git-revert $discard $hash $count",
+                    "working_directory": "/workspaces/sfcc-vscode-remote",
+                    "form": [
+                        {
+                            "variable": "$hash",
+                            "question": "Revert to SHA Hash:",
+                            "default": "HEAD"
+                        },
+                        {
+                            "variable": "$discard",
+                            "question": "Discard Uncommitted Files?",
+                            "options": [
+                              "no",
+                              "yes"
+                            ]
+                        },
+                        {
+                          "variable": "$count",
+                          "question": "Number of Commits to Rollback ( if HEAD ):",
+                          "default": "1",
+                          "options": [
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "5",
+                          ]
+                        }
+                      ]
                 }
             ]
         },

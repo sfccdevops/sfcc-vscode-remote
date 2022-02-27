@@ -13,36 +13,51 @@ PROJECT_NAME="SFCC REMOTE"
 export NODE_NO_WARNINGS=1
 
 # Formatted Confirmation Prompt
-confirm(){
+function confirm {
     echo -ne "\n\033[38;5;220m⚠ $1\033[0m"
 }
 
 # Formatted Error Output from Within Script
-error(){
+function error {
     TEXT=$( echo $1 | tr '\n' ' ')
     echo -e "\n\033[38;5;196m× $TEXT\033[0m\n"
 }
 
 # Make Header Outout for Starting Script
-make_header(){
+function make_header {
     TEXT=$( echo $1 | tr '\n' ' ')
     echo -e "\n\033[48;5;22m  $PROJECT_NAME › $TEXT  \033[0m"
 }
 
 # Formatted Notice Output from Within Script
-notice(){
+function notice {
     TEXT=$( echo $1 | tr '\n' ' ')
     echo -e "\033[38;5;220m→ $TEXT\033[0m\n"
 }
 
 # Formatted Output from Within Script
-output(){
+function output {
     TEXT=$( echo $1 | tr '\n' ' ')
     echo -e "\n\033[7m › \033[27m $TEXT"
 }
 
 # Formatted Success Output from Within Script
-success(){
+function success {
     TEXT=$( echo $1 | tr '\n' ' ')
     echo -e "\n\033[38;5;34m✓ $TEXT\033[0m\n"
+}
+
+# Helper Function to Check for Valid Input
+function list_include_item {
+  local list="$1"
+  local item="$2"
+
+  if [[ $list =~ (^|[[:space:]])"$item"($|[[:space:]]) ]] ; then
+    # yes, list include item
+    result=0
+  else
+    result=1
+  fi
+
+  return $result
 }

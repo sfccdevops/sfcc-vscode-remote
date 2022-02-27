@@ -1,0 +1,107 @@
+#!/usr/bin/env bash
+#
+# description: Bash file to perform a Clean Install of Project
+# author: Peter Schmalfeldt <peter@redvanworkshop.com>
+
+# Import Common Functions and Constants
+source /usr/local/lib/sfcc-remote/common
+
+# Discard Uncommitted Files [yes, no, default: no]
+DISCARD=$1
+
+# SHA Hash for Git [default: HEAD]
+HASH=$2
+
+# Number of Commits to Revert ( only works with HEAD )
+COUNT=$3
+
+# Reset Type
+TYPE=soft
+
+## Start Script Output
+make_header "GIT REVERT"
+
+# DISCARD: Set Default Values if Not Set
+if ! `list_include_item "yes no" "$DISCARD"`; then
+    DISCARD=no
+fi
+
+# HASH: Set Default Values if Not Set
+if [[ "$HASH" == "" ]]; then
+    HASH=HEAD
+fi
+
+# COUNT: Set Default Values if Not Set
+if ! `list_include_item "1 2 3 4 5" "$COUNT"`; then
+  COUNT=1
+fi
+
+# Overload Reset Type to Hard if Discard Requested
+if [[ "$DISCARD" == "yes" ]]; then
+    TYPE=hard
+    echo ""
+    notice "You are about to Discard Changes to your Working Directory!"
+fi
+
+# Check if Resetting to Head
+if [[ "$HASH" == "HEAD" ]]; then
+    # Create Custom Message Prompt
+    if [[ "$COUNT" == "1" ]]; then
+        MESSAGE_PROMPT="Revert Working Directory $COUNT Commit Before HEAD? ( Y or N ): "
+    else
+        MESSAGE_PROMPT="Revert Working Directory $COUNT Commits Before HEAD? ( Y or N ): "
+    fi
+
+    # Request Confirmation from Developer
+    confirm "$MESSAGE_PROMPT"
+    read CONFIRM
+    case $CONFIRM in
+        y|Y|YES|yes|Yes)
+            output "Running: git reset --$TYPE HEAD~$COUNT"
+            git reset --$TYPE HEAD~$COUNT
+            success 'REVERT COMPLETE'
+            output "Running: git status"
+            echo ""
+            git status
+        ;;
+        n|N|no|NO|No)
+            echo ""
+            notice "Cancelled: git reset --$TYPE HEAD~$COUNT"
+            exit 1
+        ;;
+        *)
+            echo ""
+            notice "Please enter only Y or N"
+            exit 1
+    esac
+
+else
+    # Make sure we have a valid hash
+    if [[ "$HASH" =~ ^[0-9a-f]{5,40}$ ]]; then
+        # Request Confirmation from Developer
+        confirm "Revert Working Directory to SHA Hash: $HASH? ( Y or N ): "
+        read CONFIRM
+        case $CONFIRM in
+            y|Y|YES|yes|Yes)
+                output "Running: git reset --$TYPE $HASH"
+                git reset --$TYPE $HASH
+                success 'REVERT COMPLETE'
+                output "Running: git status"
+                echo ""
+                git status
+            ;;
+            n|N|no|NO|No)
+                echo ""
+                notice "Cancelled: git reset --$TYPE $HASH"
+                exit 1
+            ;;
+            *)
+                echo ""
+                notice "Please enter only Y or N"
+                exit 1
+        esac
+    else
+        error "Invalid Hash: $HASH"
+        exit 1
+    fi
+fi
