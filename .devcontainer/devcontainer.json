@@ -55,13 +55,8 @@
         "window.title": "SFCC${separator}Remote${separator}${activeEditorShort}",
 
         // Editor Settings
-        "editor.cursorBlinking": "smooth",
-        "editor.cursorSmoothCaretAnimation": true,
-        "editor.cursorStyle": "line-thin",
-        "editor.fontFamily": "'FiraCode NF', Menlo, Monaco, 'Courier New', monospace",
         "editor.fontLigatures": true,
         "editor.insertSpaces": true,
-        "editor.multiCursorModifier": "alt",
         "editor.tabSize": 4,
         "editor.trimAutoWhitespace": true,
 
@@ -69,9 +64,7 @@
         "diffEditor.ignoreTrimWhitespace": true,
 
         // Terminal Settings
-        "terminal.integrated.fontFamily": "'FiraCode NF', Menlo, Monaco, 'Courier New', monospace",
         "terminal.integrated.enableBell": true,
-        "terminal.integrated.cursorBlinking": true,
 
         // File System Settings
         "files.eol": "\n",
