@@ -2,12 +2,14 @@
 
 :arrow_backward: **[BACK](./prerequisites.md#prerequisites)**
 
+:warning: **IMPORTANT:**
+
+> You only need to perform the instructions below if you intend to use terminal commands that need your SSH Keys **inside** VS Code Remote Development Container, such as `git fetch`, `git pull` or `git push`.  If you will be using these commands **outside** the container, you can skip this entire step and head over to the [Usage Instructions](./usage-instructions.md#usage-instructions).
+
 Git Credentials
 ===
 
-> Before you get too far into things, let's get your local developer machine ready to work with containers:
-
-**NOTE:** These instructions are just the most common requirements that should meed _most_ developers needs, and are likely _already_ setup on your machine. See [Sharing Git credentials with your container](https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container) for more specific setup requirements.  If you have not already created SSH Keys, follow the instructions on [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) or [BitBucket](https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/).
+**NOTE:** These instructions are just the most common requirements that should meet _most_ developers needs, and are likely _already_ setup on your machine. See [Sharing Git credentials with your container](https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container) for more specific setup requirements.  If you have not already created SSH Keys, follow the instructions on [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) or [BitBucket](https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/).
 
 **OS Specific Instructions:**
 

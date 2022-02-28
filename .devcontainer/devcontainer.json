@@ -108,7 +108,7 @@
         "liveshare.publishWorkspaceInfo": true,
         "liveshare.shareExternalFiles": false,
 
-        // Add DevOps Scripts copied from `.devcontainer/docker-assets/scripts` to /usr/local/lib/sfcc-remote/
+        // Add DevOps Scripts to Script Runner in Status Bar copied from `.devcontainer/docker-assets/scripts` to /usr/local/lib/sfcc-remote/
         "script-runner.statusBar": true,
         "script-runner.definitions": {
             "commands": [
