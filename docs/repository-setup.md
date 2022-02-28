@@ -1,6 +1,6 @@
 ![Logo](https://red-van-workshop.s3.us-east-1.amazonaws.com/logo.png "Logo")
 
-:arrow_backward: **[BACK](../README.md#organization-setup)**
+:arrow_backward: **[BACK](../README.md)**
 
 Repository Setup
 ===
@@ -16,4 +16,4 @@ Repository Setup
 Up Next
 ---
 
-[![Up Next](https://img.shields.io/badge/Next-Prerequisites-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./prerequisites.md#prerequisites)
+[![Up Next](https://img.shields.io/badge/Next-Prerequisites-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./prerequisites.md)

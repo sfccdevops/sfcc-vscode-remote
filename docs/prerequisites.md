@@ -1,6 +1,6 @@
 ![Logo](https://red-van-workshop.s3.us-east-1.amazonaws.com/logo.png "Logo")
 
-:arrow_backward: **[BACK](./repository-setup.md#repository-setup)**
+:arrow_backward: **[BACK](./repository-setup.md)**
 
 Prerequisites
 ===
@@ -30,4 +30,4 @@ After running OS Specific Instructions, complete the shared instructions:
 Up Next
 ---
 
-[![Up Next](https://img.shields.io/badge/Next-Git_Credentials-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./git-credentials.md#git-credentials)
+[![Up Next](https://img.shields.io/badge/Next-Git_Credentials-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./git-credentials.md)

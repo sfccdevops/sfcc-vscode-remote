@@ -16,11 +16,11 @@ Fully Documented
 
 Find our Complete Documentation on GitHub:
 
-[![Get Started](https://img.shields.io/badge/View-Documentation-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](https://github.com/redvanworkshop/sfcc-vscode-remote#readme)
+[![Get Started](https://img.shields.io/badge/View-Documentation-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](https://github.com/redvanworkshop/sfcc-vscode-remote)
 
 Need Help?
 ---
 
 Checkout our Troubleshooting Guide for common things that can go wrong.
 
-[![Troubleshooting](https://img.shields.io/badge/Need_help-Troubleshooting-orange.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](https://github.com/redvanworkshop/sfcc-vscode-remote/blob/develop/docs/troubleshooting.md#troubleshooting)
+[![Troubleshooting](https://img.shields.io/badge/Need_help-Troubleshooting-orange.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](https://github.com/redvanworkshop/sfcc-vscode-remote/blob/develop/docs/troubleshooting.md)
