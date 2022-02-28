@@ -16,7 +16,11 @@ VS Code Remove Developer Containers require that SSH Keys installed on the host 
 
 `git@github.com: Permission denied (publickey)`
 
-If you are seeing this kind of error, you'll need to make sure you review [Sharing Git credentials with your container](https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container)
+If you are seeing this kind of error, you'll need to make sure you review the steps covered in:
+
+[![Up Next](https://img.shields.io/badge/Next-Git_Credentials-blue.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](./git-credentials.md)
+
+If things are still not working, you can read Microsoft's docs on [Sharing Git credentials with your container](https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container).
 
 Docker
 ---
