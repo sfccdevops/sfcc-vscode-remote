@@ -16,14 +16,14 @@ HASH=$2
 COUNT=$3
 
 # Reset Type
-TYPE=soft
+TYPE=mixed
 
 ## Start Script Output
 make_header "GIT REVERT"
 
 # DISCARD: Set Default Values if Not Set
-if ! `list_include_item "yes no" "$DISCARD"`; then
-    DISCARD=no
+if ! `list_include_item "keep remove unstage" "$DISCARD"`; then
+    DISCARD=unstage
 fi
 
 # HASH: Set Default Values if Not Set
@@ -32,12 +32,17 @@ if [[ "$HASH" == "" ]]; then
 fi
 
 # COUNT: Set Default Values if Not Set
-if ! `list_include_item "1 2 3 4 5" "$COUNT"`; then
-  COUNT=1
+if ! `list_include_item "0 1 2 3 4 5" "$COUNT"`; then
+  COUNT=0
 fi
 
-# Overload Reset Type to Hard if Discard Requested
-if [[ "$DISCARD" == "yes" ]]; then
+# Overload Reset Type to Soft if Keeping Changes
+if [[ "$DISCARD" == "keep" ]]; then
+    TYPE=soft
+fi
+
+# Overload Reset Type to Hard if Removing Changes
+if [[ "$DISCARD" == "remove" ]]; then
     TYPE=hard
     echo ""
     notice "You are about to Discard Changes to your Working Directory!"
@@ -46,7 +51,9 @@ fi
 # Check if Resetting to Head
 if [[ "$HASH" == "HEAD" ]]; then
     # Create Custom Message Prompt
-    if [[ "$COUNT" == "1" ]]; then
+    if [[ "$COUNT" == "0" ]]; then
+        MESSAGE_PROMPT="Revert Working Directory to HEAD? ( Y or N ): "
+    elif [[ "$COUNT" == "1" ]]; then
         MESSAGE_PROMPT="Revert Working Directory $COUNT Commit Before HEAD? ( Y or N ): "
     else
         MESSAGE_PROMPT="Revert Working Directory $COUNT Commits Before HEAD? ( Y or N ): "
@@ -57,8 +64,14 @@ if [[ "$HASH" == "HEAD" ]]; then
     read CONFIRM
     case $CONFIRM in
         y|Y|YES|yes|Yes)
-            output "Running: git reset --$TYPE HEAD~$COUNT"
-            git reset --$TYPE HEAD~$COUNT
+            if [[ "$COUNT" == "0" ]]; then
+                output "Running: git reset --$TYPE HEAD"
+                git reset --$TYPE HEAD
+            else
+                output "Running: git reset --$TYPE HEAD~$COUNT"
+                git reset --$TYPE HEAD~$COUNT
+            fi
+
             success 'REVERT COMPLETE'
             output "Running: git status"
             echo ""
@@ -66,7 +79,11 @@ if [[ "$HASH" == "HEAD" ]]; then
         ;;
         n|N|no|NO|No)
             echo ""
-            notice "Cancelled: git reset --$TYPE HEAD~$COUNT"
+            if [[ "$COUNT" == "0" ]]; then
+                notice "Cancelled: git reset --$TYPE HEAD"
+            else
+                notice "Cancelled: git reset --$TYPE HEAD~$COUNT"
+            fi
             exit 1
         ;;
         *)

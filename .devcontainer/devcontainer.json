@@ -131,17 +131,19 @@
                         },
                         {
                             "variable": "$discard",
-                            "question": "Discard Uncommitted Files?",
+                            "question": "What would you like to do with your changes?",
                             "options": [
-                              "no",
-                              "yes"
+                              "keep",
+                              "remove",
+                              "unstage"
                             ]
                         },
                         {
                           "variable": "$count",
                           "question": "Number of Commits to Rollback ( if HEAD ):",
-                          "default": "1",
+                          "default": "0",
                           "options": [
+                            "0",
                             "1",
                             "2",
                             "3",
@@ -185,6 +187,7 @@
             "socat",
             "socat",
             "Tyriar",
+            "unstage",
             "wayou",
             "wmaurer"
         ]
@@ -223,9 +226,6 @@
         "rafamel.subtle-brackets",                  // Subtle Match Brackets
         "streetsidesoftware.code-spell-checker",    // Code Spell Checker
         "Tyriar.sort-lines",                        // Sort lines
-        "wmaurer.change-case",                      // Change Case
-
-        // Red Van Workshop Developer Extensions
-        "RedVanWorkshop.explorer-exclude-vscode-extension"
+        "wmaurer.change-case"                      // Change Case
     ]
 }
