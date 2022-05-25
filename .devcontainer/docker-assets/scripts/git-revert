@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # description: Bash file to perform a Clean Install of Project
-# author: Peter Schmalfeldt <peter@redvanworkshop.com>
+# author: Peter Schmalfeldt <me@peterschmalfeldt.com>
 
 # Import Common Functions and Constants
 source /usr/local/lib/sfcc-remote/common

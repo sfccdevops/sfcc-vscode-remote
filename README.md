@@ -1,4 +1,4 @@
-![Logo](https://red-van-workshop.s3.us-east-1.amazonaws.com/logo.png "Logo")
+![Logo](https://sfccdevops.s3.amazonaws.com/logo-128.png "Logo")
 
 SFCC › VS Code › Remote Development Container
 ===
@@ -17,7 +17,7 @@ SFCC › VS Code › Remote Development Container
 
 **Not your first time here?**
 
-[![Get Started](https://img.shields.io/badge/Download-gray.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](https://github.com/redvanworkshop/sfcc-vscode-remote/archive/refs/heads/develop.zip)
+[![Get Started](https://img.shields.io/badge/Download-gray.svg?style=for-the-badge&logo=github&logoColor=ffffff&logoWidth=16)](https://github.com/sfccdevops/sfcc-vscode-remote/archive/refs/heads/develop.zip)
 
 Demo Video
 ---
@@ -131,7 +131,7 @@ Frequently Asked Questions
 
 </details>
 
-About Us
+Disclaimer
 ---
 
-[Red Van Workshop](https://redvanworkshop.com/) works with Digital Commerce Retailers who want to get things done.  Our developers enjoy publishing [Open Source](https://github.com/redvanworkshop) solutions to everyday problems.
+> The trademarks and product names of Salesforce®, including the mark Salesforce®, are the property of Salesforce.com. SFCC DevOps is not affiliated with Salesforce.com, nor does Salesforce.com sponsor or endorse the SFCC DevOps products or website. The use of the Salesforce® trademark on this project does not indicate an endorsement, recommendation, or business relationship between Salesforce.com and SFCC DevOps.

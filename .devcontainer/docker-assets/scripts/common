@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # description: Common Functions and Constants used in different scripts
-# author: Peter Schmalfeldt <peter@redvanworkshop.com>
+# author: Peter Schmalfeldt <me@peterschmalfeldt.com>
 
 # This is the Base Path for VS Code Container
 PROJECT_BASE='/workspaces/sfcc-vscode-remote'

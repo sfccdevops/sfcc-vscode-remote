@@ -1,4 +1,4 @@
-![Logo](https://red-van-workshop.s3.us-east-1.amazonaws.com/logo.png "Logo")
+![Logo](https://sfccdevops.s3.amazonaws.com/logo-128.png "Logo")
 
 :arrow_backward: **[README](../README.md)**
 
